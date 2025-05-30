@@ -1,2 +1,7 @@
 # leetcode
-A sharp sword is forged through grinding; the fragrance of plum blossoms comes from bitter cold.
+
+没办法 太他妈卷了 不做算法笔试都过不了，mlgb 的。
+
+记录一下吧，起码把 hot100 搞会了。
+
+最近面试也有几个在靠算法，都是简单题但我没刷过都写不出来
