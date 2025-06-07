@@ -1,0 +1,26 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "没办法 太他妈卷了 不做算法笔试都过不了，mlgb 的。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3mpt/leetcode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3mpt/leetcode/issues"
+  },
+  "homepage": "https://github.com/3mpt/leetcode#readme",
+  "dependencies": {
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3"
+  }
+}
