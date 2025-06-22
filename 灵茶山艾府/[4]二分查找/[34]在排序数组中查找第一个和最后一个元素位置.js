@@ -39,3 +39,4 @@ const lowBound = (nums, target) => {
   // 返回 left left和right+1 是一个数
   return left
 }
+searchRange()
