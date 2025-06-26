@@ -53,13 +53,7 @@ export default [
       ],
       'no-useless-concat': 'error', // 禁止出现不必要的字符串连接
       'one-var': ['error', 'never'], // 禁止一次性声明多个变量
-      'prefer-const': [
-        'error',
-        {
-          destructuring: 'all', // 对解构赋值中每个变量分别检查
-          ignoreReadBeforeAssign: true, // 忽略读取后再赋值的变量
-        },
-      ],
+      'prefer-const': 'off',
       'prefer-promise-reject-errors': 'error', // Promise 的 reject 中必须传入 Error 对象，而不是字面量
       'comma-dangle': 'off', // 不校验是否具有拖尾逗号
       'multiline-ternary': 'off', // 禁止强制要求三元表达式换行
