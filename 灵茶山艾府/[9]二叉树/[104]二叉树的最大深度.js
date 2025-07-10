@@ -8,29 +8,26 @@
  */
 /**
  * @param {TreeNode} root
- * @return {number}
+ * @return {TreeNode}
  */
-// 1、直接递归
-export const maxDepth = function (root) {
-  if (root === null) return 0
-  const leftDepth = maxDepth(root.left)
-  const rightDepth = maxDepth(root.right)
-  return Math.max(leftDepth, rightDepth) + 1
-}
-// 维护全局状态
-export const maxDepth2 = function (root) {
-  // 维护全局状态
-  let res = 0
+export let lcaDeepestLeaves = function (root) {
+  // 返回的节点
+  let res = null
+  //   最大深度
+  let maxDep = 0
   function fn(node, n) {
-    // 没有节点 归出去
-    if (node === null) return
-    // 有的话深度+1
-    n++
-    // 与全局的进行比较
-    res = Math.max(res, n)
-    // 递
-    fn(node.left, n)
-    fn(node.right, n)
+    // 如果当前是空节点，更新最大深度
+    if (!node) {
+      maxDep = Math.max(maxDep, n)
+      return n
+    }
+    // 递左右深度
+    const leftDep = fn(node.left, n + 1)
+    const rightDep = fn(node.right, n + 1)
+    if (maxDep === leftDep && maxDep === rightDep) {
+      res = node
+    }
+    return Math.max(leftDep, rightDep)
   }
   fn(root, 0)
   return res
