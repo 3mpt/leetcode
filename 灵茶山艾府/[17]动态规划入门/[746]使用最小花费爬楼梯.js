@@ -21,3 +21,17 @@ export let minCostClimbingStairs = function (cost) {
   }
   return f1
 }
+export const minCostClimbingStairs2 = function (cost) {
+  let n = cost.length
+  const memo = new Map()
+  function fn(i) {
+    // 你可以选择从下标为 0 或下标为 1 的台阶开始爬楼梯。
+    // 到1 和到0 都是花费0元
+    if (i <= 1) return 0
+    if (memo.has(i)) return memo.get(i)
+    let res = Math.min(fn(i - 1) + cost[i - 1], fn(i - 2) + cost[i - 2])
+    memo.set(i, res)
+    return res
+  }
+  return fn(n)
+}

@@ -24,3 +24,21 @@ export let climbStairs = function (n) {
   }
   return f1
 }
+export const climbStairs2 = function (n) {
+  const memo = new Map()
+  // i 为第i级台阶
+  function fn(i) {
+    // 第0到第0 第0 到第1 都只有一种
+    if (i <= 1) {
+      return 1
+    }
+    if (memo.has(i)) {
+      return memo.get(i)
+    }
+    // 如果最后一个是走一个则进fn(i-1) 走两个则进fn(i-2)
+    let res = fn(i - 1) + fn(i - 2)
+    memo.set(i, res)
+    return res
+  }
+  return fn(n)
+}
